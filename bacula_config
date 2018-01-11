@@ -1,0 +1,74 @@
+#!/bin/sh
+cat << __EOC__
+$ ./configure  '--build=x86_64-redhat-linux-gnu' '--host=x86_64-redhat-linux-gnu' '--program-prefix=' '--disable-dependency-tracking' '--prefix=/usr' '--exec-prefix=/usr' '--bindir=/usr/bin' '--sbindir=/usr/sbin' '--sysconfdir=/etc' '--datadir=/usr/share' '--includedir=/usr/include' '--libdir=/usr/lib64' '--libexecdir=/usr/libexec' '--localstatedir=/var' '--sharedstatedir=/var/lib' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--disable-conio' '--disable-rpath' '--docdir=/usr/share/bacula' '--enable-batch-insert' '--enable-build-dird' '--enable-build-stored' '--enable-includes' '--enable-largefile' '--enable-readline' '--enable-smartalloc' '--sysconfdir=/etc/bacula' '--with-basename=bacula' '--with-bsrdir=/var/spool/bacula' '--with-dir-password=@@DIR_PASSWORD@@' '--with-fd-password=@@FD_PASSWORD@@' '--with-hostname=localhost' '--with-logdir=/var/log/bacula' '--with-mon-dir-password=@@MON_DIR_PASSWORD@@' '--with-mon-fd-password=@@MON_FD_PASSWORD@@' '--with-mon-sd-password=@@MON_SD_PASSWORD@@' '--with-mysql' '--with-openssl' '--with-pid-dir=/var/run' '--with-plugindir=/usr/lib64/bacula' '--with-postgresql' '--with-scriptdir=/usr/libexec/bacula' '--with-sd-password=@@SD_PASSWORD@@' '--with-smtp-host=localhost' '--with-sqlite3' '--with-subsys-dir=/var/lock/subsys' '--with-tcp-wrappers' '--with-working-dir=/var/spool/bacula' '--with-x' '--enable-bat' 'build_alias=x86_64-redhat-linux-gnu' 'host_alias=x86_64-redhat-linux-gnu' 'CFLAGS=-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches   -m64 -mtune=generic -I/usr/include/ncurses' 'LDFLAGS=-Wl,-z,relro ' 'CPPFLAGS=-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches   -m64 -mtune=generic -I/usr/include/ncurses' 'CXXFLAGS=-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches   -m64 -mtune=generic'
+
+Configuration on Sat Oct 15 01:08:22 EDT 2016:
+
+   Host:		     x86_64-redhat-linux-gnu -- redhat (Core)
+   Bacula version:	     Bacula 7.4.4 (20 September 2016)
+   Source code location:     .
+   Install binaries:	     /usr/sbin
+   Install libraries:	     /usr/lib64
+   Install config files:     /etc/bacula
+   Scripts directory:	     /usr/libexec/bacula
+   Archive directory:	     /tmp
+   Working directory:	     /var/spool/bacula
+   PID directory:	     /var/run
+   Subsys directory:	     /var/lock/subsys
+   Man directory:	     /usr/share/man
+   Data directory:	     /usr/share
+   Plugin directory:	     /usr/lib64/bacula
+   C Compiler:		     gcc 4.8.5
+   C++ Compiler:	     /usr/lib64/ccache/g++ 4.8.5
+   Compiler flags:	      -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches   -m64 -mtune=generic -I/usr/include/ncurses -x c++ -fno-strict-aliasing -fno-exceptions -fno-rtti
+   Linker flags:	      -Wl,-z,relro 
+   Libraries:		     -lpthread -ldl -ldl 
+   Statically Linked Tools:  no
+   Statically Linked FD:     no
+   Statically Linked SD:     no
+   Statically Linked DIR:    no
+   Statically Linked CONS:   no
+   Database backends:	     PostgreSQL MySQL SQLite3
+   Database port:	      
+   Database name:	     bacula
+   Database user:	     bacula
+   Database SSL options:     
+
+   Job Output Email:	     root@localhost
+   Traceback Email:	     root@localhost
+   SMTP Host Address:	     localhost
+
+   Director Port:	     9101
+   File daemon Port:	     9102
+   Storage daemon Port:      9103
+
+   Director User:	     
+   Director Group:	     
+   Storage Daemon User:      
+   Storage DaemonGroup:      
+   File Daemon User:	     
+   File Daemon Group:	     
+
+   Large file support:	     yes
+   Bacula conio support:     no -lreadline -ltinfo
+   readline support:	     yes 
+   TCP Wrappers support:     yes -lwrap
+   TLS support: 	     yes
+   Encryption support:	     yes
+   ZLIB support:	     yes
+   LZO support: 	     yes
+   enable-smartalloc:	     yes
+   enable-lockmgr:	     no
+   bat support: 	     yes
+   client-only: 	     no
+   build-dird:		     yes
+   build-stored:	     yes
+   Plugin support:	     yes
+   AFS support: 	     no
+   ACL support: 	     yes
+   XATTR support:	     yes
+   systemd support:	     no 
+   Batch insert enabled:     PostgreSQL MySQL SQLite3
+
+  
+__EOC__
